@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera WEB</title>
+</head>
+<body>
+  <h1>"Ejercicio de Introducción a HTML en OpenBootcamp"</h1>
+
+<!--Este es mi primer comentario de dos líneas-->
+<!--Aprendiendo a documentar mi código con OpenBootcampr-->
+	
+<ul>
+<a href="https://www.youtube.com/watch?v=3gstZ-fqi1I">El Fisker Ocean es ya un exito de ventas antes de salir al mercado con mas de 50 mil ordenes del SUV</a><br>
+<a href="https://www.youtube.com/watch?v=5Fh6Z3qiJ3M">Changan UNI-T•¿El SUV del futuro viene de China?</a><br>
+<a href="https://www.youtube.com/watch?v=Jdp_i27SYRM">Toyota presenta sus armas para pelear contra Tesla</a><br>
+
+</ul>
+
+
+
+
+    
+</body>
+</html>
