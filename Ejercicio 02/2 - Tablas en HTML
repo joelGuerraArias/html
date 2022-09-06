@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 02/2 - Tablas en HTML</title>
+</head>
+<body>
+
+
+
+<table>
+
+<tr>
+    <th>Titulo</th>
+    <th>Autor</th>
+    <th>Año de publicación</th>
+    <th>Enlace Amazon</th>
+</tr>
+<tr>
+    <th>Últimos días en Berlín</th>
+    <th>Paloma Sánchez-Garnica</th>
+    <th>2021</th>
+    <th><a href="https://www.amazon.es/%C3%9Altimos-d%C3%ADas-Berl%C3%ADn-Finalista-Iberoamericanos-ebook/dp/B09JWYL5B5/ref=sr_1_5?adgrpid=113861154894&gclid=Cj0KCQjw39uYBhCLARIsAD_SzMRXanDHtYF9_BLN_xo1QGgNU1y0rpzK0X92pOayrWmmJcRxztMAVcYaAnfyEALw_wcB&hvadid=486049095790&hvdev=c&hvlocphy=9069760&hvnetw=g&hvqmt=b&hvrand=4940242020065101032&hvtargid=kwd-308433211656&hydadcr=14552_1829885&keywords=ebooks+libros&qid=1662478307&sr=8-5">Enlace Amazon</a> </th>
+</tr>
+<tr>
+    <th>LA SUERTE DE LOS IDIOTAS </th>
+    <th>Roberto Martínez Guzmán</th>
+    <th>2019</th>
+    <th><a href="https://www.amazon.es/dp/B07RBQGXVX/ref=sspa_dk_detail_4?ie=UTF8&psc=1&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw">Enlace Amazon</a> </th>
+</tr>
+
+<tr>
+    <th>SIETE LIBROS PARA EVA </th>
+    <th>Roberto Martínez Guzmán</th>
+    <th>2016</th>
+    <th><a href="https://www.amazon.es/Siete-libros-para-Eva-Santiago-ebook/dp/B01HVYEAA8/ref=d_reads_cwrtbar_sccl_1_2/259-2701486-6688263?pd_rd_w=YaPBE&content-id=amzn1.sym.d3ffe41b-fd8b-4522-9447-94c68099a054&pf_rd_p=d3ffe41b-fd8b-4522-9447-94c68099a054&pf_rd_r=RSAGZAT82BQKYGFPGAKE&pd_rd_wg=nyYHe&pd_rd_r=266e0def-b551-4e69-8505-b9d67a211934&pd_rd_i=B01HVYEAA8&psc=1">Enlace Amazon</a> </th>
+</tr>
+
+
+
+</table>
+
+
+
+    
+</body>
+</html>
