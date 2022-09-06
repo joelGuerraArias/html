@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 02</title>
+</head>
+<body>
+
+    <h1>FORMULARIO</h1>
+    <form action="/"></form>
+
+     <label for="Nombre">Nombre</label>
+    <input name="name" type="text" placeholder="Escriba su nombre"> <br>
+     <label for="Edad">Edad</label>
+
+    <input type="number" name="edad" id="edad" placeholder="Ingrese su edad"  ><br>
+
+    <label for="Frase favorita">"Frase favorita"</label><br>
+    <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea><br>
+    <label for="enviar">Enviar</label>
+    <input type="submit" value=""><br>
+    <label for="reset">Reset</label>
+    <input type="reset" value=""><br>
+    
+</body>
+</html>
