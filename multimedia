@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <h1>Aprendiendo a utilizar imágenes</h1>
+        <img src="https://generacionxbox.com/wp-content/uploads/2019/08/Need-For-Speed-Heat-2019-1.jpg" alt="Logo restaurante"  width="550px" > <br>
+
+        <h1>Aprendiendo a utilizar los vídeos</h1>
+
+        <video src="https://formula1rd2.b-cdn.net/toyota/¿Qué%20es%20y%20cómo%20funciona%20un%20vehículo%20híbrido%20Toyota_.mp4" controls autoplay loop muted  height="300px" ></video>
+
+        <h2>Aprendiendo a utilizar los audios"</h2>
+        <audio src="https://formula1rd2.b-cdn.net/toyota/Search%20-%20Universal%20Production%20Music_23.mp3" controls autoplay loop ></audio>
+
+
+
+
+    </div>
+    
+</body>
+</html>
