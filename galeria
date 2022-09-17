@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/toyota.css">
+</head>
+<body>
+   <video src="img/Drift Dream- A New HotWheels Collectible by TRI and HotWheels - Toyota.mp4" autoplay muted loop class="main"></video>
+
+    <div class="galeria">
+        <img class="imgaleria" src="img/2022_Toyota_Avalon_Limited_01-1500x1000.jpg" alt="">
+        <img class="imgaleria" src="img/2022_Toyota_Avalon_Limited_02-1500x1000.jpg" alt="">
+        <img class="imgaleria" src="img/2022_Toyota_Avalon_Touring_0001-1500x833.jpg" alt="">
+        <img class="imgaleria" src="img/2022_Toyota_Avalon_Touring_001-1500x1000.jpg" alt="">
+        <img class="imgaleria" src="img/2022_Toyota_Avalon_Touring_002-1500x1000.jpg" alt="">
+        <img class="imgaleria" src="img/2022_Toyota_Avalon_Touring_005-1500x1000.jpg" alt="">
+       
+
+
+
+
+
+
+    </div>
+</body>
+</html>
