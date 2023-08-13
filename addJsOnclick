@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Esta es una calculadora</h1>
+    <input type="text" id="numero1" placeholder="ingresar valor 1">
+    <input type="text" id="numero2" placeholder="ingresar valor 2">
+    <button onclick="sumar()" id="btnSumar">Sumar</button>
+    <h2>Resultado</h2>
+
+<script>
+    let h1 = document.querySelector('h1');
+let numero1 = document.querySelector('#numero1');
+let numero2 = document.querySelector('#numero2');
+let boton = document.querySelector('#btnSumar');
+let h2 = document.querySelector('h2');
+
+
+
+
+function sumar() {
+    let n1 = Number(numero1.value);
+    let n2 = Number(numero2.value);
+    let resultado = n1 + n2;
+    h2.textContent = resultado;
+    h2.innerHTML = resultado;
+}
+
+
+</script>
+
+</body>
+
+</html>
