@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #barraProgreso {
+            width: 50%;
+            background-color: #ddd;
+            border: 1px solid #888;
+            margin: 20px auto;
+            height: 30px;
+        }
+
+        #barraProgreso div {
+            height: 100%;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 30px;
+            width: 0;
+        }
+
+        #leyendaBarra {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rifa</h1>
+    <p>Ingresa tu nombre, un número del 1 al 10 y espera hasta las 10:00 PM para la rifa.</p>
+    <input type="text" id="nombreUsuario" placeholder="Ingresa tu nombre"><br><br>
+    <input type="number" id="numeroIngresado" min="1" max="10" placeholder="Ingresa un número del 1 al 10"><br><br>
+    <button onclick="comenzarRifa()">Comenzar Rifa</button>
+    <div id="leyendaBarra">Acumulado: <span id="acumulado">0</span> de 50,000</div>
+    <div id="barraProgreso"><div id="progreso"></div></div>
+    <p id="contador">Quedan 00:00:00 para la rifa.</p>
+    <p id="resultado"></p>
+
+    <script>
+        let progreso = 0;
+
+        function comenzarRifa() {
+            const nombreUsuario = document.getElementById("nombreUsuario").value;
+            const numeroIngresado = parseInt(document.getElementById("numeroIngresado").value);
+            if (nombreUsuario.trim() === "") {
+                alert("Por favor, ingresa tu nombre.");
+            } else if (numeroIngresado >= 1 && numeroIngresado <= 10) {
+                const ahora = new Date();
+                const horaRifa = new Date();
+                horaRifa.setHours(22, 0, 0); // Rifa a las 10:00 PM
+
+                if (ahora >= horaRifa) {
+                    alert("La rifa ya pasó hoy. Por favor, intenta nuevamente mañana.");
+                } else {
+                    aumentarProgreso();
+                    rifa(nombreUsuario, numeroIngresado, horaRifa);
+                }
+            } else {
+                document.getElementById("resultado").textContent = "El número ingresado no es válido. Debe estar entre 1 y 10.";
+            }
+        }
+
+        function aumentarProgreso() {
+            progreso += 50;
+            document.getElementById("progreso").style.width = (progreso / 50000 * 100) + "%";
+            document.getElementById("acumulado").textContent = progreso;
+        }
+
+        function rifa(nombreUsuario, numeroIngresado, horaRifa) {
+            const intervalo = setInterval(function() {
+                const ahora = new Date();
+                const diferencia = horaRifa - ahora;
+
+                if (diferencia < 0) {
+                    clearInterval(intervalo);
+                    document.getElementById("contador").textContent = "La rifa ha comenzado.";
+                    const numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+                    document.getElementById("resultado").innerHTML = "Hola, " + nombreUsuario + "!<br>";
+                    document.getElementById("resultado").innerHTML += "El número ganador es: " + numeroAleatorio + "<br>";
+                    document.getElementById("resultado").innerHTML += "Tu número elegido fue: " + numeroIngresado + "<br>";
+                    if (numeroIngresado === numeroAleatorio) {
+                        document.getElementById("resultado").innerHTML += "¡Felicidades! ¡Has ganado!";
+                    } else {
+                        document.getElementById("resultado").innerHTML += "Lo siento, no has ganado. Mejor suerte la próxima vez.";
+                    }
+                } else {
+                    const horas = Math.floor(diferencia / (1000 * 60 * 60));
+                    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+                    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+                    document.getElementById("contador").textContent = "Quedan " + formatoDosDigitos(horas) + ":" + formatoDosDigitos(minutos) + ":" + formatoDosDigitos(segundos) + " para la rifa.";
+                }
+            }, 1000);
+        }
+
+        function formatoDosDigitos(numero) {
+            return numero < 10 ? "0" + numero : numero;
+        }
+    </script>
+</body>
+</html>
