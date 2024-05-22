@@ -1,0 +1,48 @@
+<?php
+/*
+Plugin Name: YouTube Live Stream Display
+Description: Muestra el canal de YouTube solo si está transmitiendo en vivo.
+Version: 1.0
+Author: Tu Nombre
+*/
+
+function youtube_live_stream_shortcode($atts) {
+    $atts = shortcode_atts(array(
+        'api_key' => '',
+        'channel_id' => '',
+    ), $atts, 'youtube_live_stream');
+
+    ob_start();
+    ?>
+    <div id="youtube-live-stream" style="display: none;">
+        <iframe id="live-stream" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const apiKey = '<?php echo esc_js($atts['api_key']); ?>';
+            const channelId = '<?php echo esc_js($atts['channel_id']); ?>';
+            const liveStreamDiv = document.getElementById('youtube-live-stream');
+            const liveStreamIframe = document.getElementById('live-stream');
+
+            fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&eventType=live&key=${apiKey}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.items && data.items.length > 0) {
+                        const liveVideoId = data.items[0].id.videoId;
+                        liveStreamIframe.src = `https://www.youtube.com/embed/${liveVideoId}`;
+                        liveStreamDiv.style.display = 'block';
+                    }
+                })
+                .catch(error => console.error('Error fetching live stream data:', error));
+        });
+    </script>
+    <?php
+    return ob_get_clean();
+}
+
+function register_youtube_live_stream_shortcode() {
+    add_shortcode('youtube_live_stream', 'youtube_live_stream_shortcode');
+}
+
+add_action('init', 'register_youtube_live_stream_shortcode');
+?>
